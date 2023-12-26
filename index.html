@@ -23,15 +23,64 @@
     <header class="header-area">
         <div class="container">
                 <!------- Nav Area Starts ------>
-                <nav>
+                <!-- <nav>
                     <ul>
+                        <li class="hideOnMobile"><a href="#">Home</a></li>
+                        <li class="hideOnMobile"><a href="#">photoapp</a></li>
+                        <li class="hideOnMobile"><a href="#"><img class="logo" src="images/logo.png" alt=""></a></li>
+                        <li class="hideOnMobile"><a href="#">design</a></li>
+                        <li class="hideOnMobile"><a href="#">download</a></li>
+                        <li class="menuButton" onclick=showSidebar()><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+
+                    </ul>
+
+                    <ul class="sidebar">
+                        <li onclick=hideSidebar()><a href="#"><i class="fa-solid fa-close"></i></a></li>
+                        <li><a href="#"><img class="logo" src="images/logo.png" alt=""></a></li>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">photoapp</a></li>
-                        <li><a href="#"><img class="logo" src="images/logo.png" alt=""></a></li>
                         <li><a href="#">design</a></li>
                         <li><a href="#">download</a></li>
+
+                    </ul>
+                </nav> -->
+
+
+                <nav>
+                    <ul class="first-sidebar">
+                        <li class="menu-button" onclick=showSidebar()><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+                        <li class="hideOnMobile"><a href="">Home</a></li>
+                        <li class="hideOnMobile"><a href="">photo app</a></li>
+                        <li class="hideOnMobile"><a href=""><img src="images/logo.png" alt=""></a></li>
+                        <li class="hideOnMobile"><a href="">design</a></li>
+                        <li class="hideOnMobile"><a href="">download</a></li>
+                        
+                    </ul>
+
+                    <ul class="sidebar">
+                        <li onclick=hideSidebar()><a href="#"><i class="fa-solid fa-close"></i></a></li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">photo app</a></li>
+                        <li><a href="">design</a></li>
+                        <li><a href="">download</a></li>
                     </ul>
                 </nav>
+
+
+
+                <script>
+                    function showSidebar(){
+                        const sidebar = document.querySelector('.sidebar')
+                        sidebar.style.display = 'flex'
+                    }
+
+                    function hideSidebar(){
+                        const sidebar = document.querySelector('.sidebar')
+                        sidebar.style.display ='none'
+                    }
+
+                    
+                </script>
                 <!------- Nav Area Ends ------>
             
 

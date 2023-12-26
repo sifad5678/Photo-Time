@@ -76,7 +76,93 @@ h2{
 
 
 /*-------- 2.1 Menu Area -----------*/
-.header-area nav {
+
+
+/* first menu bar */
+.first-sidebar{
+	width: 100%;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0;
+}
+.header-area ul li{
+	height: 50px;
+}
+.header-area ul li a{
+	height: 100%;
+	padding:0 30px;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+}
+.header-area ul li a:hover{
+    color:#1BBC9B;
+}
+
+
+
+/* Second Menu bar */
+.sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding-top: 25px;
+	width: 250px !important;
+	height: 100vh;
+	z-index: 999;
+    background-color: rgba(255, 255, 255, 0.37);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, .1);
+
+
+	display: none;
+	flex-direction: column;
+	align-items: flex-start !important;
+    justify-content: flex-start;
+
+
+}
+.sidebar li:first-child{
+	margin-left: auto;
+}
+.sidebar li{
+	width: 100%;
+}
+.sidebar li a{
+	width: 100%;
+	transition: .1s;
+	border-bottom: 1px solid transparent;
+}
+.sidebar li a:hover{
+	background-color: transparent !important;
+	text-indent: 5px;
+	border-bottom: 1px solid white;
+}
+
+
+.menu-button{
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .header-area nav {
 	padding: 28px 0;
 }
 .header-area nav ul{
@@ -105,7 +191,46 @@ h2{
 	border-bottom: 2px solid white;
 	color: #16A086;
 }
+.header-area nav ul li a i{
+	font-size: 25px;
+}
 
+
+/*-------- Sidebar Menu   ---------*/
+ /*.sidebar{
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	z-index: 999;
+	background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+
+
+	display: none;
+	flex-direction: column;
+	width: 250px;
+	
+}
+.sidebar li{
+	height: 50px;
+	width: 100%;
+}
+.sidebar li a{
+	width: 100%;
+}
+.sidebar li:first-child{
+	margin-left: auto;
+	margin-top: 30px;
+}
+.sidebar li:nth-child(2){
+	
+	margin-bottom: 50px;
+}
+
+.menuButton{
+	display: none !important;
+} */
 
 /*-------- 2.2 Welcome Text  -----------*/
 .welcome-text{
@@ -140,6 +265,8 @@ h2{
 	border: 1px solid #16A086;
 	background-color: rgba(255, 255, 255, 0.767);
 }
+
+
 
 
 /*-------- 2.3 Social Media  -----------*/
@@ -401,19 +528,40 @@ button{
 /*----------------          Media Query                   -----------------*/
 
 @media (max-width:960px){
-	.header-area nav ul li{
+	/* .header-area nav ul li{
 		margin: 0 12px;
-	}
+	} */
 }
 
 @media (max-width:768px){
 
-	.header-area nav ul li{
+	 .hideOnMobile{
+		display: none;
+		
+	} 
+	.menu-button{
 		display: block;
-		text-align: start;
-		border-bottom: 1px solid rgba(153, 153, 153, 0.76);
-		padding: 15px 0;
 	}
+	.first-sidebar {
+		
+	display: flex;
+	justify-content: flex-start;
+	}
+	
+
+
+	/* .header-area nav ul{
+		text-align: start;
+	}
+	.hideOnMobile{
+		display: none !important;
+	}
+	.menuButton{
+		display: block !important;
+	} */
+
+
+
 
 	/*------------- Getting Started -------*/
 	.getting-started{
@@ -494,6 +642,12 @@ button{
 	.footer-area .left-footer ul li:first-child{
 		border-left: none;
 		border-bottom: 1px solid #1BBC9B;
+	}
+
+
+	/*---------- Sidebar Menu --------*/
+	.sidebar{
+		width: 100% !important;
 	}
 }
 
