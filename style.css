@@ -156,7 +156,7 @@ h2{
 	display: none;
 }
 .menu-button a{
-	padding: 0 43px;
+	padding: 0 20px;
 }
 
 
@@ -554,7 +554,6 @@ button{
 
 	}
 	.first-sidebar {
-	padding: 2rem 2rem 0 0;
 	display: flex;
 	justify-content: flex-end;
 	}
@@ -622,7 +621,7 @@ button{
 }
 
 
-@media (max-width:430px){
+@media (max-width:500px){
 
 
 	/*---------- Getting Started ---------*/
