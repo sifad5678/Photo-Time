@@ -89,10 +89,10 @@ h2{
 }
 .header-area ul li{
 	height: 50px;
+	padding: 0 30px;
 }
 .header-area ul li a{
 	height: 100%;
-	padding:0 30px;
 	text-decoration: none;
 	color: white;
 	text-transform: uppercase;
@@ -102,20 +102,26 @@ h2{
 .header-area ul li a:hover{
     color:#1BBC9B;
 }
-
+/* second logo */
+#second-logo{
+	width: 100%;
+	padding-left: 20px;
+	display: none;
+	align-items: start;
+}
 
 
 /* Second Menu bar */
 .sidebar {
 	position: fixed;
 	top: 0;
-	left: 0;
+	right:  0;
 	padding-top: 25px;
 	width: 250px !important;
 	height: 100vh;
 	z-index: 999;
     background-color: rgba(255, 255, 255, 0.37);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, .1);
 
 
@@ -131,6 +137,8 @@ h2{
 }
 .sidebar li{
 	width: 100%;
+	list-style: none;
+	padding: 0 50px;
 }
 .sidebar li a{
 	width: 100%;
@@ -146,6 +154,9 @@ h2{
 
 .menu-button{
 	display: none;
+}
+.menu-button a{
+	padding: 0 43px;
 }
 
 
@@ -527,13 +538,12 @@ button{
 
 /*----------------          Media Query                   -----------------*/
 
-@media (max-width:960px){
-	/* .header-area nav ul li{
-		margin: 0 12px;
-	} */
-}
+
 
 @media (max-width:768px){
+	#second-logo{
+		display: flex;
+	}
 
 	 .hideOnMobile{
 		display: none;
@@ -541,11 +551,12 @@ button{
 	} 
 	.menu-button{
 		display: block;
+
 	}
 	.first-sidebar {
-		
+	padding: 2rem 2rem 0 0;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: flex-end;
 	}
 	
 
@@ -612,6 +623,8 @@ button{
 
 
 @media (max-width:430px){
+
+
 	/*---------- Getting Started ---------*/
 	.getting-started .text-area{
 		margin-left: 0;
@@ -629,6 +642,10 @@ button{
 	}
 
 	/*-------- Subscribe Area ------------*/
+	.subscribe-area form input[type="email"]{
+		width: 70%;
+		outline: none;
+	}
 	.subscribe-area form button{
 		margin-top: 10px;
 	}
@@ -649,6 +666,12 @@ button{
 	.sidebar{
 		width: 100% !important;
 	}
+	.sidebar  li a{
+		padding: 10px 30px;
+	}
+
+
+
 }
 
 
